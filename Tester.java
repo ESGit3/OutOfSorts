@@ -8,7 +8,7 @@ public class Tester {
             arr[i] = rng.nextInt() % 1000;
         }
         System.out.println(Arrays.toString(arr));
-        Sorts.selectionSort(arr);
+        Sorts.insertionSort(arr);
         System.out.println(Arrays.toString(arr));
 
 

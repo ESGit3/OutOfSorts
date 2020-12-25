@@ -30,21 +30,25 @@ public class Tester {
                         randData[i] = (new Random()).nextInt() % 1000;
                     }
                     Arrays.sort(randData);
-                    int temp = new int[randData.length];
-                    for (int j = randData.length - 1; j >= 0; j++) {
-                        temp[j] = randData[i];
+                    for (int i = 0; i <= randData.length / 2; i++) {
+                        int temp = randData[i];
+                        randData[i] = randData[randData.length - 1 - i];
+                        randData[randData.length - 1 - i] = temp;
                     }
-                    randData = temp;
                 }
 
                 if(args[1].equals("bubble")){
                     Sorts.bubbleSort(randData);
+                    System.out.println(Arrays.toString(randData));
                 }
                 else if(args[1].equals("selection")){
                     Sorts.selectionSort(randData);
+                    System.out.println(Arrays.toString(randData));
                 }
                 else if(args[1].equals("insertion")){
+                    System.out.println(Arrays.toString(randData));
                     Sorts.insertionSort(randData);
+                    System.out.println(Arrays.toString(randData));
                 }
 
                 //TEST MODE! This lets you see if your algorithm fails

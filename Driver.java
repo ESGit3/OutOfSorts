@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Tester {
+public class Driver {
         public static void main(String[]args){
             if(args.length < 2){
                 System.out.println("usage: java Driver SIZE ALGO [STYLE]");
